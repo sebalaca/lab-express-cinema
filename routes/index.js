@@ -14,4 +14,13 @@ router.get("/movies", (req, res) => {
     })
     .catch((error) => console.log(error));
 })
+
+router.get("/details/:id", (req, res) => {
+    const id = req.params.id; // lo que esta por la url guardalo en variable const id
+    Movie.findById(id)
+    .then((movie) => {
+        res.render("details", movie)
+    })
+    .catch((error) => console.log(error));
+})
 module.exports = router;

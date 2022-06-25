@@ -1,12 +1,22 @@
-{{#each response}}
+<div class="container">
+    {{#each response}}
+    <div class="card" style="min-width: 200px !important;">
+        <img src="{{image}}" class="card-img-top img-size" alt="{{title}}">
+        <div class="card-body">
+            <h5 class="card-title">{{title}}</h5>
+            <a href="/details/{{id}}" class="btn btn-primary">See More</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
 
-<div id="movie-info">
+
+
+{{!-- <div id="movie-info">
     <h2>"{{title}}"</h2>
     <img src="{{image}}" alt="movie" width="150px" />
     <br>
     <button>
         <a href="/movies/{{id}}">See more</a>
     </button>
-</div>
-
-{{/each}}
+</div> --}}
